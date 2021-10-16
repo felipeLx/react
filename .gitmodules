@@ -7,3 +7,6 @@
 [submodule "redux"]
 	path = redux
 	url = https://github.com/felipeLx/react.git
+[submodule "courses/epic/book-react-app"]
+	path = courses/epic/book-react-app
+	url = https://github.com/felipeLx/react.git

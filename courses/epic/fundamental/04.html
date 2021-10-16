@@ -1,0 +1,67 @@
+<!-- Creating custom components -->
+<!-- http://localhost:3000/isolated/exercise/04.html -->
+
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@17.0.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
+  <script src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
+  <script type="text/babel">
+  
+    /* function message({children}) {
+        return <div className='message'>{children}</div>
+    }
+
+    const element = (
+      <div className='container'>
+        {React.createElement(message, {children: 'Hello World'})}
+        {React.createElement(message, {children: 'Goodbye World'})}
+      </div> 
+    ) */
+
+   /*  function Message({children}) {
+      return <div className='message'>{children}</div>
+    } */
+
+    function Message({subject, greeting}) {
+      return(
+        <div className='message'>
+          {greeting}, {subject}  
+        </div>
+      )
+    }
+
+    /* Message.propTypes = {
+      subject(props, propName, componentName) {
+        const type = typeof props[propName];
+        if(type !== 'string') {
+          return new Error(
+            `the component ${componentName} need the prop ${propName} to be ${type}`
+          )
+        }
+      }
+    } */
+
+    Message.propTypes = {
+      subject: PropTypes.string.isRequired,
+      greeting: PropTypes.string.isRequired
+    }
+
+    /* const element = (
+      <div className='container'>
+        <Message greeting='Hello' subject='World' />
+        <Message greeting='Goodbye' subject={1} />
+      </div>
+     )*/
+
+     const element = (
+        <React.Fragment>
+          <Message greeting='Hello' subject='World' />
+          <Message greeting='Goodbye' subject={1} />
+        </React.Fragment>
+     )
+
+    ReactDOM.render(element, document.getElementById('root'))
+  </script>
+</body>
