@@ -1,0 +1,156 @@
+.Projects {
+    color: black;
+    background-color: #3282b8;
+    padding: 20px 0;
+    margin: 0 auto;
+    text-align: center;
+    display: inline-flex;
+    margin: 0 auto;
+    justify-content: top;
+    flex-flow: column;
+    width: 100%;
+    min-height: 870px;
+}
+
+/* .Projects div {
+    display: flex;
+    padding: 20px;
+    width: 40%;
+    flex-flow: column;
+} */
+
+.Stage {
+    border-radius: 50%;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    perspective: 1200px;
+    perspective-origin: 50% 50%;
+    z-index: -1;
+}
+
+@media (max-height: 736px) and (max-width: 414px) {
+    .Stage{
+        background-color: #3282b8;
+        height: calc( 100vh - 50px );
+        padding: 20px;
+        perspective: 400px;
+        
+    }
+    .Carousel {
+        display: inline-block;
+        flex-flow: row;
+        padding: 0;
+    }
+    .Middle {
+        display: none;
+    }
+
+    .After {
+        display: none;
+    }
+}
+
+@media (max-height: 800px) {
+    .Stage{
+        width: 100%;
+        line-height: 300px;
+        perspective: 900px;
+    }
+    .Carousel {
+        display: inline-block;
+        flex-flow: row;
+        padding: 0;
+        line-height: 200px;
+    }
+    .Middle {
+        display: none;
+    }
+
+    .After {
+        display: none;
+    }
+}
+
+@media (max-height: 1024px) and (max-width: 768px) {
+    .Stage{
+        width: 80%;
+        perspective-origin: 50% 50%;
+        perspective: 400px;
+    }
+    .Carousel {
+        display: inline-block;
+        flex-flow: column;
+        padding: 0;
+        line-height: 200px;
+    }
+
+    .Before {
+        width: 5rem;
+        display: block;
+    }
+
+    .Middle {
+        display: none;
+    }
+
+    .After {
+        display: none;
+    }
+    
+}
+
+.Carousel {
+    padding-top: 40px;
+    transform-style: preserve-3d;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    align-items: center;
+    justify-content: center;
+    align-content: space-between; 
+    z-index: 2;
+}
+
+
+
+.Middle {
+    display: inline-flex;
+    height: 100%;
+    top: 50px;
+    font-weight: bold;
+    right: 50%;
+}
+
+.Before {
+    display: inline-flex;
+    height: 80%;
+    top: 40px;
+    left: 80px;
+    transform: rotateY(-1.0rad) translateX(0px) translateZ(-20px);
+    opacity:  1; 
+}
+
+.After {
+    display: inline-flex;
+    height: 80%;
+    top: 40px;
+    right: 80px;    
+    transform: rotateY(1.047rad) translateX(0px) translateZ(-20px);
+    opacity:  1;
+}
+
+.Controls :hover {
+    background: none;
+    
+    align-content: center;
+    outline-color: red;
+}
+
+.Controls {
+    background: none;
+    align-content: center;
+    position: relative;
+    align-items: center;
+}

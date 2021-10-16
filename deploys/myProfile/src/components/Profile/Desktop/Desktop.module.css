@@ -1,0 +1,31 @@
+.Desktop {
+    max-width: 100%;
+    padding: 10px;
+    background-color: #3282b8;
+}
+
+.Techs {
+    padding: 5px;
+}
+
+.Skills {
+    background-color: #0f4c75;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size-adjust: inherit;
+    box-shadow: black;
+    max-width: 90%;
+    text-align: justify;
+    margin: auto;
+    padding: 10px;
+    z-index: 10;
+    color: white;
+}
+
+.Gifs {
+    display: inline-flex;
+    align-content: space-between;
+    align-items: center;
+    text-align: center;
+    flex-flow: row;
+}

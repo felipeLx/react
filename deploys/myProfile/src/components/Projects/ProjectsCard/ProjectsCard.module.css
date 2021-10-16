@@ -1,0 +1,9 @@
+.Card {
+    z-index: 2;
+    background-color: white;
+    border-radius: 0;
+    width: 180px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 900px;
+}

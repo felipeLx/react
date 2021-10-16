@@ -1,0 +1,28 @@
+.Button {
+    background-color: #0052D4;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font: inherit;
+    padding: 10px;
+    margin: 10px;
+    font-weight: bold;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+
+.Profile {
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size-adjust: inherit;
+    box-shadow: black;
+    max-width: 90%;
+    text-align: justify;
+    margin: auto;
+    padding: 10px;
+    z-index: 10;
+    color: white;
+}

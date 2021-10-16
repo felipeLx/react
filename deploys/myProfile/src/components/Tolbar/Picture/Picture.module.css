@@ -1,0 +1,5 @@
+.Picture img {
+    height: auto;
+    max-width: 40px;
+    border-radius: 5px;
+}

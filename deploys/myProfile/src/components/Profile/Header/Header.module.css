@@ -1,0 +1,106 @@
+.HeaderAnime {
+    background-color: #0f4c75;
+    display: flex;
+    width: 100%;
+    flex-flow: row;
+    align-items: center;
+    align-content: space-between;
+    padding-top: 30px;
+}
+
+.Picture {
+  display: flex;
+  flex-flow: wrap;
+  left: 100px;
+}
+
+.Picture figure img{
+  width: 230px;
+  display: flex;
+  padding-right: 40px;
+}
+
+
+.BannerText {
+  opacity: 0.8;
+  max-width: 90%;
+  height: auto;
+  margin: 10px auto;
+  border-radius: 20px;  
+  color: white;
+}
+
+.BannerText h1 {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+}
+
+.Links a i{
+  padding: 15px;
+}
+
+.Links a i:hover {
+  -moz-transform: scale(3);
+-webkit-transform: scale(3);
+-o-transform: scale(3);
+}
+
+.CssAnime {
+    width: 80%;
+    height: 250px;
+    text-align: center;
+    margin: 10px auto;
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.CloudIntro{
+  position: relative;
+  height: 100%;
+  background: url(https://static.radulescu.me/examples/clouds/clouds1000.png);
+  background: url(https://static.radulescu.me/examples/clouds/clouds1000.png) 0 200px,
+              url(https://static.radulescu.me/examples/clouds/clouds1200_1.png) 0 300px,
+              url(https://static.radulescu.me/examples/clouds/clouds1000_blur3.png) 100px 250px;
+  animation: wind 20s linear infinite; 
+  border-radius: 40px;
+}
+
+@keyframes wind{
+  0% {
+    background-position: 0 200px, 0 300px, 100px 250px;
+  }
+  100% {
+    background-position: 1000px 200px, 1200px 300px, 1100px 250px;
+  }
+}
+
+.Sky {
+  position: relative;
+  height: 100%;
+  border-radius: 40px;
+  animation: sky 50s linear infinite;
+}
+
+@keyframes sky{
+  0%   {background-color:red; }
+  25%  {background-color:yellow; }
+  50%  {background-color:blue; }
+  75%  {background-color:green;}
+  100% {background-color:red; }
+}
+
+.Tech1 {
+  position: relative;
+  height: 100%;
+  width: 80%;
+  animation: tech 7s linear infinite;
+  padding-top: 30px;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes tech {
+  0% {transform:  translate(-180px,120px);}
+  50%  {transform: translate(130px,40px); }
+  100% {transform: translate(50px, 120px);}
+}

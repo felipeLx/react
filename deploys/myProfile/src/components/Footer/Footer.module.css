@@ -1,0 +1,37 @@
+.Footer {
+    width: 100%;
+    max-height: 150px;
+    display: flex;
+    flex-flow: column;
+    background-color: #bbe1fa;
+    color: black;
+    text-align: center;
+    padding-top: 30px;
+    align-items: center;
+    align-content: space-between;
+    
+}
+
+.Links {
+    padding: 20px 10px;
+    align-content: center;
+    display: flex;
+    flex-flow: row;
+}
+
+
+.Links a{
+    text-decoration: none;
+    padding: 0 10px;
+    color: black;
+}
+
+.Links a:hover{
+    background-color: #3282b8;
+    color: white;
+}
+
+.Links li {
+    text-align: center;
+    list-style: none;
+}

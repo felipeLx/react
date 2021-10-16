@@ -1,0 +1,14 @@
+{
+  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
+  "rules": {
+    "ingredients": {
+    	".read": true,
+    	".write":true
+      },
+    "orders": {
+      ".read": "auth != null",
+    	".write":"auth != null",
+      ".indexOn": ["userId"]
+      }
+  }
+}
