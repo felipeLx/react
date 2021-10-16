@@ -1,0 +1,41 @@
+{
+        "hits": [
+            {
+                "highlights": [],
+                "index": "song",
+                "type": "song",
+                "result": {
+                    "annotation_count": 9,
+                    "api_path": "/songs/86495",
+                    "full_title": "Me and Bobby McGee by Janis Joplin",
+                    "header_image_thumbnail_url": "https://images.genius.com/123262b6c422df64b3ec062b16f3bd36.250x251x1.jpg",
+                    "header_image_url": "https://images.genius.com/123262b6c422df64b3ec062b16f3bd36.250x251x1.jpg",
+                    "id": 86495,
+                    "lyrics_owner_id": 123252,
+                    "lyrics_state": "complete",
+                    "path": "/Janis-joplin-me-and-bobby-mcgee-lyrics",
+                    "pyongs_count": 10,
+                    "song_art_image_thumbnail_url": "https://images.genius.com/123262b6c422df64b3ec062b16f3bd36.250x251x1.jpg",
+                    "song_art_image_url": "https://images.genius.com/123262b6c422df64b3ec062b16f3bd36.250x251x1.jpg",
+                    "stats": {
+                        "unreviewed_annotations": 0,
+                        "hot": false,
+                        "pageviews": 113493
+                    },
+                    "title": "Me and Bobby McGee",
+                    "title_with_featured": "Me and Bobby McGee",
+                    "url": "https://genius.com/Janis-joplin-me-and-bobby-mcgee-lyrics",
+                    "primary_artist": {
+                        "api_path": "/artists/24360",
+                        "header_image_url": "https://images.genius.com/ae853e0f601fe67de9f086843a36dc6e.500x333x1.jpg",
+                        "id": 24360,
+                        "image_url": "https://images.genius.com/28ce4a2c316ee99e1afecd1bc3243a7a.655x655x1.jpg",
+                        "is_meme_verified": false,
+                        "is_verified": false,
+                        "name": "Janis Joplin",
+                        "url": "https://genius.com/artists/Janis-joplin"
+                    }
+                }
+            }
+        ]
+}

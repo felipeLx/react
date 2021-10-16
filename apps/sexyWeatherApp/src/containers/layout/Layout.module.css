@@ -1,0 +1,32 @@
+body {
+  background: #CC95C0;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.Layout {
+    font-family: Helvetica;
+    justify-content: space-between;
+    color: black;
+    max-width: 100%;
+    height: auto;
+    align-self: center;
+    text-align: center;
+    margin-top: 20px;
+  }
+/*   
+  .Layout--clear {
+    border-color: #f53e3e;
+  }
+  
+  .Layout--rain {
+    border-color: rgb(30, 240, 187);
+  }
+  
+  .Layout--cloud {
+    border-color: rgb(94, 92, 92);  
+  }
+  
+  .Layout--snow {
+    border-color: #ffffff;  
+  } */

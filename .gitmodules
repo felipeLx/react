@@ -10,3 +10,12 @@
 [submodule "courses/epic/book-react-app"]
 	path = courses/epic/book-react-app
 	url = https://github.com/felipeLx/react.git
+[submodule "apps/apps/unfinished/ReactApp"]
+	path = apps/apps/unfinished/ReactApp
+	url = https://github.com/felipeLx/react.git
+[submodule "apps/apps/unfinished/ReactFalemais"]
+	path = apps/apps/unfinished/ReactFalemais
+	url = https://github.com/felipeLx/react.git
+[submodule "apps/apps/unfinished/react-ajax"]
+	path = apps/apps/unfinished/react-ajax
+	url = https://github.com/felipeLx/react.git

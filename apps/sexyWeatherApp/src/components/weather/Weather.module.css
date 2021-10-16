@@ -1,0 +1,29 @@
+.Layout {
+    border-radius: 10px;
+    font-family: Helvetica;
+    justify-content: space-between;
+    max-width: 100%;
+    height: auto;
+    color: black;
+    
+  }
+  
+  .Layout__clear img {
+    border: 5px;
+    border-color: #f53e3e;
+  }
+  
+  .Layout__rain img {
+    border: 5px;
+    border-color: rgb(30, 240, 187);
+  }
+  
+  .Layout__clouds img {
+    border: 5px;
+    border-color: black;  
+  }
+  
+  .Layout__snow img {
+    border: 5px;
+    border-color: #ffffff;  
+  }
