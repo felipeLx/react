@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1631969855934" clover="3.2.0">
+  <project timestamp="1631969855935" name="All files">
+    <metrics statements="300" coveredstatements="216" conditionals="150" coveredconditionals="80" methods="133" coveredmethods="90" elements="583" coveredelements="386" complexity="0" loc="300" ncloc="300" packages="6" files="28" classes="28"/>
+    <package name="src">
+      <metrics statements="35" coveredstatements="16" conditionals="12" coveredconditionals="2" methods="19" coveredmethods="9"/>
+      <file name="app.js" path="/home/felipelx/Desktop/workspace/courses/bookshelf/src/app.js">
+        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="2"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="11" count="8" type="stmt"/>
+        <line num="12" count="7" type="stmt"/>
+      </file>
+      <file name="auth-provider.js" path="/home/felipelx/Desktop/workspace/courses/bookshelf/src/auth-provider.js">
+        <metrics statements="14" coveredstatements="4" conditionals="2" coveredconditionals="0" methods="7" coveredmethods="2"/>
+        <line num="4" count="7" type="stmt"/>
+        <line num="10" count="14" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="27" count="29" type="stmt"/>
+        <line num="32" count="7" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="43" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+      </file>
+      <file name="authenticated-app.js" path="/home/felipelx/Desktop/workspace/courses/bookshelf/src/authenticated-app.js">
+        <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="1" methods="5" coveredmethods="5"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="32" count="8" type="stmt"/>
+        <line num="33" count="7" type="stmt"/>
+        <line num="79" count="21" type="stmt"/>
+        <line num="80" count="21" type="stmt"/>
+        <line num="114" count="7" type="stmt"/>
+        <line num="149" count="8" type="stmt"/>
+      </file>
+      <file name="bootstrap.js" path="/home/felipelx/Desktop/workspace/courses/bookshelf/src/bootstrap.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="index.js" path="/home/felipelx/Desktop/workspace/courses/bookshelf/src/index.js">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+      </file>
+      <file name="unauthenticated-app.js" path="/home/felipelx/Desktop/workspace/courses/bookshelf/src/unauthenticated-app.js">
+        <metrics statements="7" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="64" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components">
+      <metrics statements="88" coveredstatements="59" conditionals="48" coveredconditionals="24" methods="36" coveredmethods="26"/>
+      <file name="book-row.js" path="/home/felipelx/Desktop/workspace/courses/bookshelf/src/components/book-row.js">
+        <metrics statements="4" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+      </file>
+      <file name="lib.js" path="/home/felipelx/Desktop/workspace/courses/bookshelf/src/components/lib.js">
+        <metrics statements="18" coveredstatements="17" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="3"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="32" count="3" type="stmt"/>
+        <line num="40" count="3" type="stmt"/>
+        <line num="43" count="3" type="stmt"/>
+        <line num="47" count="3" type="stmt"/>
+        <line num="57" count="3" type="stmt"/>
+        <line num="64" count="7" type="cond" truecount="0" falsecount="1"/>
+        <line num="67" count="3" type="stmt"/>
+        <line num="73" count="3" type="stmt"/>
+        <line num="74" count="3" type="stmt"/>
+        <line num="76" count="3" type="stmt"/>
+        <line num="88" count="3" type="stmt"/>
+        <line num="94" count="29" type="stmt"/>
+        <line num="110" count="3" type="stmt"/>
+        <line num="118" count="3" type="stmt"/>
+        <line num="124" count="3" type="stmt"/>
+        <line num="144" count="0" type="stmt"/>
+      </file>
+      <file name="list-item-list.js" path="/home/felipelx/Desktop/workspace/courses/bookshelf/src/components/list-item-list.js">
+        <metrics statements="8" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="17" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+      </file>
+      <file name="logo.js" path="/home/felipelx/Desktop/workspace/courses/bookshelf/src/components/logo.js">
+        <metrics statements="2" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="3" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="4" count="0" type="stmt"/>
+      </file>
+      <file name="modal.js" path="/home/felipelx/Desktop/workspace/courses/bookshelf/src/components/modal.js">
+        <metrics statements="16" coveredstatements="15" conditionals="2" coveredconditionals="2" methods="11" coveredmethods="10"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="11" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="29" count="3" type="stmt"/>
+        <line num="30" count="3" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="36" count="3" type="stmt"/>
+        <line num="37" count="3" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+      </file>
+      <file name="profiler.js" path="/home/felipelx/Desktop/workspace/courses/bookshelf/src/components/profiler.js">
+        <metrics statements="10" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="9" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="30" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+      </file>
+      <file name="rating.js" path="/home/felipelx/Desktop/workspace/courses/bookshelf/src/components/rating.js">
+        <metrics statements="16" coveredstatements="15" conditionals="10" coveredconditionals="6" methods="7" coveredmethods="7"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="22" count="36" type="stmt"/>
+        <line num="24" count="36" type="stmt"/>
+        <line num="26" count="36" type="stmt"/>
+        <line num="28" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="32" count="11" type="stmt"/>
+        <line num="33" count="11" type="stmt"/>
+        <line num="36" count="36" type="stmt"/>
+        <line num="38" count="36" type="stmt"/>
+        <line num="39" count="180" type="stmt"/>
+        <line num="40" count="180" type="stmt"/>
+        <line num="41" count="180" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="91" count="36" type="stmt"/>
+        <line num="93" count="1" type="stmt"/>
+      </file>
+      <file name="status-buttons.js" path="/home/felipelx/Desktop/workspace/courses/bookshelf/src/components/status-buttons.js">
+        <metrics statements="14" coveredstatements="12" conditionals="20" coveredconditionals="15" methods="7" coveredmethods="6"/>
+        <line num="24" count="130" type="stmt"/>
+        <line num="27" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="30" count="3" type="stmt"/>
+        <line num="34" count="130" type="stmt"/>
+        <line num="59" count="75" type="stmt"/>
+        <line num="61" count="75" type="stmt"/>
+        <line num="62" count="75" type="stmt"/>
+        <line num="63" count="75" type="stmt"/>
+        <line num="65" count="75" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
+        <line num="79" count="1" type="stmt"/>
+        <line num="88" count="1" type="stmt"/>
+        <line num="95" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.context">
+      <metrics statements="45" coveredstatements="35" conditionals="16" coveredconditionals="9" methods="14" coveredmethods="9"/>
+      <file name="auth-context.js" path="/home/felipelx/Desktop/workspace/courses/bookshelf/src/context/auth-context.js">
+        <metrics statements="40" coveredstatements="32" conditionals="12" coveredconditionals="8" methods="12" coveredmethods="7"/>
+        <line num="13" count="14" type="stmt"/>
+        <line num="15" count="14" type="stmt"/>
+        <line num="16" count="14" type="cond" truecount="1" falsecount="1"/>
+        <line num="17" count="14" type="stmt"/>
+        <line num="18" count="14" type="stmt"/>
+        <line num="21" count="14" type="stmt"/>
+        <line num="22" count="11" type="stmt"/>
+        <line num="24" count="14" type="stmt"/>
+        <line num="26" count="14" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="43" count="43" type="stmt"/>
+        <line num="45" count="42" type="stmt"/>
+        <line num="46" count="14" type="stmt"/>
+        <line num="47" count="14" type="stmt"/>
+        <line num="50" count="42" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="54" count="42" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="58" count="42" type="stmt"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="61" count="0" type="stmt"/>
+        <line num="64" count="42" type="stmt"/>
+        <line num="65" count="28" type="stmt"/>
+        <line num="69" count="42" type="cond" truecount="4" falsecount="0"/>
+        <line num="70" count="28" type="stmt"/>
+        <line num="73" count="14" type="cond" truecount="1" falsecount="1"/>
+        <line num="74" count="0" type="stmt"/>
+        <line num="77" count="14" type="cond" truecount="1" falsecount="1"/>
+        <line num="78" count="14" type="stmt"/>
+        <line num="81" count="0" type="stmt"/>
+        <line num="85" count="502" type="stmt"/>
+        <line num="86" count="500" type="cond" truecount="1" falsecount="1"/>
+        <line num="87" count="0" type="stmt"/>
+        <line num="89" count="500" type="stmt"/>
+        <line num="93" count="486" type="stmt"/>
+        <line num="94" count="486" type="stmt"/>
+        <line num="95" count="486" type="stmt"/>
+        <line num="96" count="15" type="stmt"/>
+      </file>
+      <file name="index.js" path="/home/felipelx/Desktop/workspace/courses/bookshelf/src/context/index.js">
+        <metrics statements="5" coveredstatements="3" conditionals="4" coveredconditionals="1" methods="2" coveredmethods="2"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="11" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="12" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="19" count="14" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.screens">
+      <metrics statements="28" coveredstatements="12" conditionals="42" coveredconditionals="18" methods="15" coveredmethods="5"/>
+      <file name="book.js" path="/home/felipelx/Desktop/workspace/courses/bookshelf/src/screens/book.js">
+        <metrics statements="12" coveredstatements="12" conditionals="18" coveredconditionals="18" methods="5" coveredmethods="5"/>
+        <line num="20" count="58" type="stmt"/>
+        <line num="21" count="57" type="stmt"/>
+        <line num="22" count="55" type="stmt"/>
+        <line num="24" count="55" type="stmt"/>
+        <line num="26" count="55" type="stmt"/>
+        <line num="88" count="34" type="cond" truecount="2" falsecount="0"/>
+        <line num="92" count="34" type="stmt"/>
+        <line num="106" count="38" type="stmt"/>
+        <line num="108" count="38" type="stmt"/>
+        <line num="109" count="5" type="stmt"/>
+        <line num="114" count="36" type="stmt"/>
+        <line num="117" count="38" type="stmt"/>
+      </file>
+      <file name="discover.js" path="/home/felipelx/Desktop/workspace/courses/bookshelf/src/screens/discover.js">
+        <metrics statements="11" coveredstatements="0" conditionals="24" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="94" count="0" type="stmt"/>
+      </file>
+      <file name="finished.js" path="/home/felipelx/Desktop/workspace/courses/bookshelf/src/screens/finished.js">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+      </file>
+      <file name="not-found.js" path="/home/felipelx/Desktop/workspace/courses/bookshelf/src/screens/not-found.js">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="7" count="0" type="stmt"/>
+      </file>
+      <file name="reading-list.js" path="/home/felipelx/Desktop/workspace/courses/bookshelf/src/screens/reading-list.js">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.styles">
+      <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="colors.js" path="/home/felipelx/Desktop/workspace/courses/bookshelf/src/styles/colors.js">
+        <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+      </file>
+      <file name="media-queries.js" path="/home/felipelx/Desktop/workspace/courses/bookshelf/src/styles/media-queries.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.utils">
+      <metrics statements="88" coveredstatements="78" conditionals="32" coveredconditionals="27" methods="49" coveredmethods="41"/>
+      <file name="api-client.js" path="/home/felipelx/Desktop/workspace/courses/bookshelf/src/utils/api-client.js">
+        <metrics statements="12" coveredstatements="12" conditionals="13" coveredconditionals="13" methods="2" coveredmethods="2"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="9" count="35" type="stmt"/>
+        <line num="20" count="35" type="stmt"/>
+        <line num="21" count="35" type="cond" truecount="2" falsecount="0"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="28" count="34" type="stmt"/>
+        <line num="29" count="34" type="cond" truecount="2" falsecount="0"/>
+        <line num="30" count="31" type="stmt"/>
+        <line num="32" count="3" type="stmt"/>
+      </file>
+      <file name="books.js" path="/home/felipelx/Desktop/workspace/courses/bookshelf/src/utils/books.js">
+        <metrics statements="19" coveredstatements="9" conditionals="4" coveredconditionals="2" methods="12" coveredmethods="5"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="15" count="20" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="45" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="49" count="57" type="stmt"/>
+        <line num="50" count="57" type="stmt"/>
+        <line num="52" count="3" type="stmt"/>
+        <line num="55" count="55" type="cond" truecount="2" falsecount="0"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="62" count="0" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="70" count="19" type="stmt"/>
+      </file>
+      <file name="hooks.js" path="/home/felipelx/Desktop/workspace/courses/bookshelf/src/utils/hooks.js">
+        <metrics statements="27" coveredstatements="27" conditionals="6" coveredconditionals="6" methods="12" coveredmethods="12"/>
+        <line num="4" count="187" type="stmt"/>
+        <line num="5" count="187" type="stmt"/>
+        <line num="6" count="32" type="stmt"/>
+        <line num="7" count="32" type="stmt"/>
+        <line num="9" count="187" type="stmt"/>
+        <line num="10" count="43" type="cond" truecount="2" falsecount="0"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="22" count="188" type="stmt"/>
+        <line num="26" count="187" type="stmt"/>
+        <line num="27" count="67" type="stmt"/>
+        <line num="31" count="187" type="stmt"/>
+        <line num="33" count="187" type="stmt"/>
+        <line num="34" count="20" type="stmt"/>
+        <line num="37" count="187" type="stmt"/>
+        <line num="38" count="2" type="stmt"/>
+        <line num="41" count="187" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="46" count="187" type="stmt"/>
+        <line num="48" count="21" type="cond" truecount="4" falsecount="0"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="53" count="20" type="stmt"/>
+        <line num="54" count="20" type="stmt"/>
+        <line num="56" count="19" type="stmt"/>
+        <line num="57" count="19" type="stmt"/>
+        <line num="60" count="1" type="stmt"/>
+        <line num="61" count="1" type="stmt"/>
+        <line num="68" count="187" type="stmt"/>
+      </file>
+      <file name="list-items.js" path="/home/felipelx/Desktop/workspace/courses/bookshelf/src/utils/list-items.js">
+        <metrics statements="28" coveredstatements="28" conditionals="9" coveredconditionals="6" methods="22" coveredmethods="21"/>
+        <line num="6" count="130" type="stmt"/>
+        <line num="7" count="130" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="130" type="stmt"/>
+        <line num="13" count="130" type="stmt"/>
+        <line num="15" count="6" type="stmt"/>
+        <line num="20" count="12" type="stmt"/>
+        <line num="21" count="12" type="stmt"/>
+        <line num="22" count="8" type="stmt"/>
+        <line num="27" count="130" type="cond" truecount="1" falsecount="1"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="32" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="33" count="6" type="stmt"/>
+        <line num="37" count="4" type="stmt"/>
+        <line num="39" count="4" type="stmt"/>
+        <line num="40" count="4" type="stmt"/>
+        <line num="41" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="45" count="4" type="stmt"/>
+        <line num="49" count="149" type="stmt"/>
+        <line num="51" count="149" type="stmt"/>
+        <line num="53" count="4" type="stmt"/>
+        <line num="66" count="75" type="stmt"/>
+        <line num="68" count="75" type="stmt"/>
+        <line num="70" count="1" type="stmt"/>
+        <line num="72" count="1" type="stmt"/>
+        <line num="73" count="1" type="stmt"/>
+        <line num="76" count="1" type="stmt"/>
+        <line num="84" count="75" type="stmt"/>
+        <line num="86" count="75" type="stmt"/>
+      </file>
+      <file name="misc.js" path="/home/felipelx/Desktop/workspace/courses/bookshelf/src/utils/misc.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="66" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

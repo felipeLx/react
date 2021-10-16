@@ -1,0 +1,31 @@
+{
+    "public": "index.html",
+    "cleanUrls": [
+        "/app/**",
+        "/!components/**"
+      ],
+    "rewrites": [
+        { "source": "/products/:id/edit", "destination": "/edit-project-:id.html" }
+    ],
+    "headers": [
+        {
+          "source" : "**/*.@(jpg|jpeg|gif|png)",
+          "headers" : [{
+            "key" : "Cache-Control",
+            "value" : "max-age=7200"
+          }]
+        }, {
+          "source" : "404.html",
+          "headers" : [{
+            "key" : "Cache-Control",
+            "value" : "max-age=300"
+          }]
+        }
+    ],
+    "unlisted": [
+        ".DS_Store",
+        ".git",
+        ".yml",
+        "coverage"
+      ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "projectb",
+  "version": "1.0.0",
+  "description": "be project",
+  "main": "server.js",
+  "scripts": {
+    "start":"node server.js",	  
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "github.com/felipeLx",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
