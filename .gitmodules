@@ -1,0 +1,9 @@
+[submodule "apps/ReactInstantMessage"]
+	path = apps/ReactInstantMessage
+	url = https://github.com/felipeLx/react.git
+[submodule "projectb"]
+	path = projectb
+	url = https://github.com/felipeLx/react.git
+[submodule "redux"]
+	path = redux
+	url = https://github.com/felipeLx/react.git
