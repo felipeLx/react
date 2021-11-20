@@ -12,7 +12,7 @@ function App() {
           Bookshelf
         </h1>
       </header>
-      <main>
+      <main className="container">
         <Modal />
       </main>
     </div>
