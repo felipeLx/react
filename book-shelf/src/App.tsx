@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {Logo} from 'components/logo';
 import {Modal} from 'components/modal';
+import { LoginForm } from 'components/login';
 import './App.css';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       </header>
       <main className="container">
         <Modal />
+        <LoginForm />
       </main>
     </div>
   );

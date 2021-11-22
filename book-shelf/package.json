@@ -20,6 +20,7 @@
     "debounce-fn": "^4.0.0",
     "faker": "^5.5.3",
     "firebase": "^9.5.0",
+    "firebaseui": "^6.0.0",
     "history": "^5.0.0",
     "match-sorter": "^6.3.0",
     "msw": "^0.29.0",

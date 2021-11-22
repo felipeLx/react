@@ -1,5 +1,6 @@
-import * as React from 'react'
-import {Dialog} from '@reach/dialog'
+import * as React from 'react';
+import firebase from 'firebase/app';
+import {firebaseConfig} from 'config/config';
 
 type LocalStorage = any;
 
@@ -40,9 +41,16 @@ function useLocalStorageState(
     }, [key, state, serialize]);
   
     return [state, setState];
-  };
-  
-  export {useLocalStorageState};
+};
+
+firebase.initializeApp(firebaseConfig);
+const AuthContext = React.createContext('null');
+
+const useAuth = () => {
+  return React.useContext(AuthContext)
+};
+
+export {useLocalStorageState, useAuth};
   
   /*
   eslint
