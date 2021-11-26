@@ -1,0 +1,39 @@
+{
+  "private": true,
+  "name": "remix-app-template",
+  "description": "",
+  "license": "",
+  "scripts": {
+    "build": "remix build",
+    "dev": "remix dev",
+    "postinstall": "remix setup node",
+    "start": "remix-serve build"
+  },
+  "dependencies": {
+    "@chakra-ui/core": "^0.8.0",
+    "@emotion/core": "^11.0.0",
+    "@emotion/styled": "^11.6.0",
+    "@firebase/auth": "^0.19.3",
+    "@remix-run/react": "^1.0.5",
+    "@remix-run/serve": "^1.0.5",
+    "bcrypt": "^5.0.1",
+    "emotion-theming": "^11.0.0",
+    "firebase": "^9.5.0",
+    "firebase-admin": "^10.0.0",
+    "nookies": "^2.5.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "remix": "^1.0.5"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "^1.0.5",
+    "@types/bcrypt": "^5.0.0",
+    "@types/react": "^17.0.24",
+    "@types/react-dom": "^17.0.9",
+    "typescript": "^4.1.2"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "sideEffects": false
+}
