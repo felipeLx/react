@@ -1,15 +1,23 @@
-import type { ActionFunction, LinksFunction } from "remix";
-import {
-  useActionData,
-  Link,
-  useSearchParams
-} from "remix";
+import type { ActionFunction, LinksFunction, MetaFunction } from "remix";
+import { useActionData, useSearchParams, Link, Form } from "remix";
 import { db } from "~/utils/db.server";
-import { login, createUserSession } from "~/utils/session.server";
+import {
+  createUserSession,
+  login,
+  register
+} from "~/utils/session.server";
 import stylesUrl from "../styles/login.css";
 
 export let links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: stylesUrl }];
+};
+
+export let meta: MetaFunction = () => {
+  return {
+    title: "Remix Jokes | Login",
+    description:
+      "Login to submit your own jokes to Remix Jokes!"
+  };
 };
 
 function validateUsername(username: unknown) {
@@ -44,7 +52,7 @@ export let action: ActionFunction = async ({
   let loginType = form.get("loginType");
   let username = form.get("username");
   let password = form.get("password");
-  let redirectTo = form.get("redirectTo");
+  let redirectTo = form.get("redirectTo") || "/jokes";
   if (
     typeof loginType !== "string" ||
     typeof username !== "string" ||
@@ -65,14 +73,13 @@ export let action: ActionFunction = async ({
   switch (loginType) {
     case "login": {
       let user = await login({ username, password });
-
       if (!user) {
         return {
           fields,
           formError: `Username/Password combination is incorrect`
         };
       }
-      return createUserSession(user.id, "/");
+      return createUserSession(user.id, redirectTo);
     }
     case "register": {
       let userExists = await db.user.findFirst({
@@ -84,9 +91,14 @@ export let action: ActionFunction = async ({
           formError: `User with username ${username} already exists`
         };
       }
-      // create the user
-      // create their session and redirect to /jokes
-      return { fields, formError: "Not implemented" };
+      const user = await register({ username, password });
+      if (!user) {
+        return {
+          fields,
+          formError: `Something went wrong trying to create a new user.`
+        };
+      }
+      return createUserSession(user.id, redirectTo);
     }
     default: {
       return { fields, formError: `Login type invalid` };
@@ -101,7 +113,7 @@ export default function Login() {
     <div className="container">
       <div className="content" data-light="">
         <h1>Login</h1>
-        <form
+        <Form
           method="post"
           aria-describedby={
             actionData?.formError
@@ -151,8 +163,6 @@ export default function Login() {
               type="text"
               id="username-input"
               name="username"
-              placeholder="user@email.com"
-              style={{color: "black"}}
               defaultValue={actionData?.fields?.username}
               aria-invalid={Boolean(
                 actionData?.fieldErrors?.username
@@ -214,7 +224,7 @@ export default function Login() {
           <button type="submit" className="button">
             Submit
           </button>
-        </form>
+        </Form>
       </div>
       <div className="links">
         <ul>

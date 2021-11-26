@@ -10,6 +10,16 @@ type LoginForm = {
   password: string;
 };
 
+export async function register({
+  username,
+  password
+}: LoginForm) {
+  let passwordHash = await bcrypt.hash(password, 10);
+  return db.user.create({
+    data: { username, passwordHash }
+  });
+}
+
 export async function login({
   username,
   password
@@ -67,6 +77,33 @@ export async function requireUserId(
     throw redirect(`/login?${searchParams}`);
   }
   return userId;
+}
+
+export async function getUser(request: Request) {
+  let userId = await getUserId(request);
+  if (typeof userId !== "string") {
+    return null;
+  }
+
+  try {
+    let user = await db.user.findUnique({
+      where: { id: userId }
+    });
+    return user;
+  } catch {
+    throw logout(request);
+  }
+}
+
+export async function logout(request: Request) {
+  let session = await storage.getSession(
+    request.headers.get("Cookie")
+  );
+  return redirect("/login", {
+    headers: {
+      "Set-Cookie": await storage.destroySession(session)
+    }
+  });
 }
 
 export async function createUserSession(
