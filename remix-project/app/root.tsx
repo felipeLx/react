@@ -73,15 +73,9 @@ function Layout({ children }: React.PropsWithChildren<{}>) {
     <div className="remix-app">
       <header className="remix-app__header">
         <div className="container remix-app__header-content">
-            Logo Space
           <nav aria-label="Main navigation" className="remix-app__header-nav">
             <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-              <Link to="/login">Login</Link>
-              </li>
+              
             </ul>
           </nav>
         </div>

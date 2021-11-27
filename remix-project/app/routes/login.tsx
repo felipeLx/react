@@ -1,12 +1,14 @@
-import type { ActionFunction, LinksFunction } from "remix";
+import { ActionFunction, LinksFunction } from "remix";
 import { useActionData, useSearchParams, Link, Form } from "remix";
 import {
   createUserSession,
   login,
   register
 } from "~/utils/session.server";
+import type {UserCredential, GoogleAuthProvider} from 'firebase/auth';
+import {signInWithPopup} from 'firebase/auth'
+import {auth, provider} from '~/fire/fireClient';
 import stylesUrl from "../styles/login.css";
-import {getAuth} from 'firebase/auth';
 
 export let links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: stylesUrl }];
@@ -40,6 +42,7 @@ type ActionData = {
 export let action: ActionFunction = async ({
   request
 }): Promise<Response | ActionData> => {
+  
   let form = await request.formData();
   let loginType = form.get("loginType");
   let username = form.get("username");
@@ -64,13 +67,6 @@ export let action: ActionFunction = async ({
 
   switch (loginType) {
     case "login": {
-      const chkUser = getAuth().currentUser;
-      if(!chkUser) {
-        return {
-          fields,
-          FormError: 'user not exist, please register'
-        }
-      }
       const user = await login({ username, password });
       
       if (!user) {
@@ -82,15 +78,6 @@ export let action: ActionFunction = async ({
       return createUserSession(user.email, redirectTo);
     }
     case "register": {
-      console.log('register');
-      let chkUser = getAuth().currentUser;
-      if(chkUser) {
-        return {
-          fields,
-          FormError: `User already exist`
-        };
-      } 
-      
       const user = await register({ username, password });
       if (!user) {
         return {
@@ -100,11 +87,27 @@ export let action: ActionFunction = async ({
       }
       return createUserSession(user.email, redirectTo);
     }
+    case "loginGoogle": {
+      const user = await loginWithGoogle();
+      return createUserSession(user.email, redirectTo);
+    }
     default: {
       return { fields, FormError: `Login type invalid` };
     }
   }
 };
+
+async function loginWithGoogle() {
+  let user = await signInWithPopup(auth, provider)
+    .then((result) => result.user)
+    .catch((error) => {
+      // Handle Errors here.
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      
+    });
+    return user;
+}
 
 export default function Login() {
   let actionData = useActionData<ActionData | undefined>();
@@ -112,8 +115,7 @@ export default function Login() {
   return (
     <div className="container">
       <div className="content" data-light="">
-        <h1>Login</h1>
-        <Form
+       <Form
           method="post"
           aria-describedby={
             actionData?.FormError
@@ -224,7 +226,18 @@ export default function Login() {
           <button type="submit" className="button">
             Submit
           </button>
+          <br />
+         
         </Form>
+        <button 
+            type="submit" 
+            className="button"
+            name="loginType"
+            value="loginGoogle"
+            onClick={loginWithGoogle}
+          >
+            Google Login
+          </button>
       </div>
       <div className="links">
         <ul>

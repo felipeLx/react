@@ -1,10 +1,6 @@
-import {
-  createCookieSessionStorage,
-  redirect
-} from "remix";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
-import {auth} from '~/fire/fireClient';
-import { UserInfo } from "firebase-admin/lib/auth/user-record";
+import { createCookieSessionStorage, redirect } from "remix";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "firebase/auth";
+import {auth } from '~/fire/fireClient';
 
 type LoginForm = {
     username: string;
@@ -16,39 +12,31 @@ export async function register({
   username,
   password
 }: LoginForm) {
-  let chkUser = getAuth().currentUser
-  console.log('ck:', chkUser);
-  
-
-  let user = await createUserWithEmailAndPassword(auth, username, password)
+  let user = await createUserWithEmailAndPassword(auth, username ,  password )
     .then(userCredential => userCredential.user)
     .catch(function(error): any {
         let errorCode = error.code;
         let errorMessage = error.message;
         if (errorCode == 'auth/weak-password') {
-            alert('The password is too weak.');
+            return ('The password is too weak.');
           } else {
-            alert(errorMessage);
+            return errorMessage;
           }
-          console.log(error);
-        });
-    return user;
+    });
+        
+  return user;
 }
 
 export async function login({
   username,
   password
 }: LoginForm) {
-  let chkUser = getAuth().currentUser
-  console.log('ck:', chkUser);
   let user = await signInWithEmailAndPassword(auth, username, password)
-        .then(userCredential => userCredential.user)
-        .catch(err => {
-            let errCode = err.code;
-            let errMsg = err.message;
-
-            console.log('errCode & errMsg', errCode + ':' + errMsg);
-        });
+    .then(userCredential => userCredential.user)
+    .catch(err => {
+      err.code;
+      err.message;
+    });
   return user;
 }
 
@@ -96,13 +84,16 @@ export async function requireUserId(
 }
 
 export async function getUser(request: Request) {
-  let userId = await getUserId(request);
+  let userId = auth.currentUser?.email 
   if (typeof userId !== "string") {
     return null;
   }
 
   try {
-    let user = getAuth().currentUser;
+    let user = auth.currentUser
+    onAuthStateChanged(auth, (user) => user)
+    console.log('user, gerUser session: ', user);
+    
     return user;
   } catch {
     throw logout(request);
@@ -110,6 +101,7 @@ export async function getUser(request: Request) {
 }
 
 export async function logout(request: Request) {
+  signOut(auth);
   let session = await storage.getSession(
     request.headers.get("Cookie")
   );
