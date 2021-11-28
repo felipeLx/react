@@ -92,8 +92,6 @@ export async function getUser(request: Request) {
   try {
     let user = auth.currentUser
     onAuthStateChanged(auth, (user) => user)
-    console.log('user, gerUser session: ', user);
-    
     return user;
   } catch {
     throw logout(request);

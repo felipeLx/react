@@ -1,5 +1,10 @@
 import { initializeApp } from "firebase/app";
+/*
 import {getFirestore, collection, getDocs, onSnapshot, addDoc, deleteDoc, doc, query, where} from 'firebase/firestore';
+
+var firebase = require('firebase');
+var firebaseui = require('firebaseui');
+*/
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 
 const firebaseConfig = {
@@ -10,12 +15,12 @@ const firebaseConfig = {
   messagingSenderId: "458358744644",
   appId: "1:458358744644:web:3579a1774de14733297e11"
 };
-
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const provider = new GoogleAuthProvider();
-provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
 
+
+/*
 const db = getFirestore();
 const colRef = collection(db, 'books');
 
@@ -46,3 +51,28 @@ const queueSnapShot = onSnapshot(queue, (snapshot) => {
     })
     //console.log(books)
 })
+*/
+
+/*
+
+var ui = new firebaseui.auth.AuthUI(firebase.auth())
+
+ui.start('#firebaseui-auth-container', {
+  signInOptions: [
+    firebase.auth.EmailAuthProvider.PROVIDER_ID,
+    {
+      provider: firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+      requireDisplayName: false,
+      scopes: [
+        'https://www.googleapis.com/auth/contacts.readonly'
+      ],
+      customParameters: {
+        // Forces account selection even when one account
+        // is available.
+        prompt: 'select_account'
+      }
+    }
+  ],
+  // Other config options...
+});
+*/

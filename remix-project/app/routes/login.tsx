@@ -1,14 +1,17 @@
-import { ActionFunction, LinksFunction } from "remix";
+import { ActionFunction, LinksFunction, redirect } from "remix";
 import { useActionData, useSearchParams, Link, Form } from "remix";
 import {
   createUserSession,
+  getUser,
   login,
   register
 } from "~/utils/session.server";
-import type {UserCredential, GoogleAuthProvider} from 'firebase/auth';
+import type {User, UserCredential} from 'firebase/auth';
 import {signInWithPopup} from 'firebase/auth'
 import {auth, provider} from '~/fire/fireClient';
 import stylesUrl from "../styles/login.css";
+import { ButtonHTMLAttributes, MouseEvent, MouseEventHandler } from "toasted-notes/node_modules/@types/react";
+import { storage } from "firebase-admin";
 
 export let links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: stylesUrl }];
@@ -37,6 +40,9 @@ type ActionData = {
     username: string;
     password: string;
   };
+  userProvider?: {
+    google: Function;
+  }
 };
 
 export let action: ActionFunction = async ({
@@ -56,8 +62,10 @@ export let action: ActionFunction = async ({
   ) {
     return { FormError: `Form not submitted correctly.` };
   }
+  
 
   let fields = { loginType, username, password };
+  
   let fieldErrors = {
     username: validateUsername(username),
     password: validatePassword(password)
@@ -65,7 +73,25 @@ export let action: ActionFunction = async ({
   if (Object.values(fieldErrors).some(Boolean))
     return { fieldErrors, fields };
 
-  switch (loginType) {
+  let userProvider = {
+    google: async() => {
+      let existUser = auth.currentUser;
+      if(existUser) {
+        return createUserSession(existUser.email, '/');
+      }
+      
+      const user = await signInWithPopup(auth, provider)
+        .then(response => response.user)
+      console.log('user', user);
+      if (!user) {
+        Promise.reject('User not found');
+      }
+      auth.updateCurrentUser(user);
+      return createUserSession(user.email, '/');   
+    } 
+  } 
+
+    switch (loginType) {
     case "login": {
       const user = await login({ username, password });
       
@@ -87,31 +113,18 @@ export let action: ActionFunction = async ({
       }
       return createUserSession(user.email, redirectTo);
     }
-    case "loginGoogle": {
-      const user = await loginWithGoogle();
-      return createUserSession(user.email, redirectTo);
-    }
+    
     default: {
       return { fields, FormError: `Login type invalid` };
     }
   }
 };
 
-async function loginWithGoogle() {
-  let user = await signInWithPopup(auth, provider)
-    .then((result) => result.user)
-    .catch((error) => {
-      // Handle Errors here.
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      
-    });
-    return user;
-}
 
 export default function Login() {
   let actionData = useActionData<ActionData | undefined>();
   let [searchParams] = useSearchParams();
+  
   return (
     <div className="container">
       <div className="content" data-light="">
@@ -140,8 +153,8 @@ export default function Login() {
                 name="loginType"
                 value="login"
                 defaultChecked={
-                  !actionData?.fields?.loginType ||
-                  actionData?.fields?.loginType === "login"
+                  actionData?.fields?.loginType === "login" ||
+                  !actionData?.fields?.loginType
                 }
               />{" "}
               Login
@@ -165,7 +178,7 @@ export default function Login() {
               type="text"
               id="username-input"
               name="username"
-              defaultValue={actionData?.fields?.username}
+              //defaultValue={actionData?.fields?.username}
               aria-invalid={Boolean(
                 actionData?.fieldErrors?.username
               )}
@@ -190,7 +203,7 @@ export default function Login() {
             <input
               id="password-input"
               name="password"
-              defaultValue={actionData?.fields?.password}
+              //defaultValue={actionData?.fields?.password}
               type="password"
               aria-invalid={
                 Boolean(
@@ -227,16 +240,15 @@ export default function Login() {
             Submit
           </button>
           <br />
-         
+          
         </Form>
-        <button 
-            type="submit" 
-            className="button"
-            name="loginType"
-            value="loginGoogle"
-            onClick={loginWithGoogle}
-          >
-            Google Login
+        <button
+              type="button"
+              name="provider"
+              value="google"
+              onClick={actionData?.userProvider?.google()}
+            >
+            Google
           </button>
       </div>
       <div className="links">
