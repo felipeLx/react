@@ -8,7 +8,7 @@ import {
 } from "~/utils/session.server";
 import type {User, UserCredential} from 'firebase/auth';
 import {signInWithPopup} from 'firebase/auth'
-import {auth, provider} from '~/fire/fireClient';
+import {auth, provider} from '~/firebase/fireClient';
 import stylesUrl from "../styles/login.css";
 import { ButtonHTMLAttributes, MouseEvent, MouseEventHandler } from "toasted-notes/node_modules/@types/react";
 import { storage } from "firebase-admin";

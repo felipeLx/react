@@ -1,6 +1,6 @@
 import { createCookieSessionStorage, redirect } from "remix";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "firebase/auth";
-import {auth } from '~/fire/fireClient';
+import {auth } from '~/firebase/fireClient';
 
 type LoginForm = {
     username: string;

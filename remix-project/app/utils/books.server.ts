@@ -1,4 +1,4 @@
-import {books} from '~/fire/fireClient';
+import {books} from '~/firebase/fireClient';
 
 type BookLoader = {
     id: string,
